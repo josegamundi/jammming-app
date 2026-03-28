@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from "./App.module.css";
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +22,7 @@ function App() {
 
       <div className={styles.mainContent}>
         <div className={styles.searchSection}>
-          Search Bar
+          <SearchBar/>
         </div>
 
         <div className={styles.gridContainer}>
