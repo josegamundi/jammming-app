@@ -6,12 +6,12 @@
 .header {
   background-color: #2563eb;
   color: white;
-  padding: 2rem 1rem;
   
 }
 .headerContent {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 .headerTitle {
   margin: 0 0 1rem;
