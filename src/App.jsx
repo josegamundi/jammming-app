@@ -8,24 +8,22 @@ function App() {
   return (
     <div className={styles.container}>
 
-      <div className={styles.header}>
+      <header className={styles.header}>
         <div className={styles.headerContent}>
-          <div className={styles.headerTitle}>
-            
-            <h1>Jamming</h1>
-          </div>
-          <p className={styles.headerSubtitle}>
+          <h1 className={styles.headerTitle}>Jamming</h1>
+          <p>
             Search for songs and create your custom playlist
           </p>
         </div>
-      </div>
+      </header>
 
-      <div className={styles.mainContent}>
+      <main className={styles.mainContent}>
         <div className={styles.searchSection}>
           <SearchBar/>
         </div>
 
         <div className={styles.gridContainer}>
+          
           <div className={styles.resultsSection}>
             <div className={styles.resultsCard}>
               <h2 className={styles.sectionTitle}>
@@ -39,11 +37,14 @@ function App() {
 
           <div className={styles.playlistSection}>
             <div className={styles.stickyPlaylist}>
-              PLaylist
+              <h2 className={styles.sectionTitle}>
+                PLaylist
+              </h2>
             </div>
           </div>
+
         </div>
-      </div>
+      </main>
 
     </div>
   )
