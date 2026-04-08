@@ -1,33 +1,60 @@
 :root {
+  /* Color */
+
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
-  --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --input-bg: rgba(244, 243, 236, 0.6);
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Typography */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  --sans: Roboto, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+
+  --line-xs: 1.125rem;
+  --line-sm: 1.25rem;
+  --line-md: 1.5rem;
+  --line-lg: 1.75em;
+  --line-xl: 2rem;
+  --line-2xl: 2.5rem;
+
+  /* Spaces */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+
+  /* Ground rules */
+
+  font-family: var(--sans);
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
+}
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+  :root{font-size: 16px;}
+}
+
+@media only screen and (max-width: 499px) {
+  :root{font-size: 14px;}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,76 +63,54 @@
     --text-h: #f3f4f6;
     --bg: #16171d;
     --border: #2e303a;
-    --code-bg: #1f2028;
     --accent: #c084fc;
     --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+    --input-bg: rgba(47, 48, 58, 0.5);
   }
 }
 
-body {
+/* General settings */
+
+* {
   margin: 0;
+  padding: 0;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
+/* Typography settings */
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+.title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: var(--line-2xl);
 }
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+.subtitle {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: var(--line-xl);
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+.highlight-text {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  line-height: var(--line-lg);
 }
-p {
-  margin: 0;
+.base-text {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--text-md);
+  line-height: var(--line-md);
 }
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+.secondary-text {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: var(--line-sm);
 }
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.label {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  line-height: var(--line-xs);
 }
