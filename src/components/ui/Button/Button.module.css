@@ -1,0 +1,14 @@
+.button {
+  display: inline-block;
+  border: 1px solid var(--accent-bg);
+  border-radius: var(--space-5);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--accent-bg);
+  color: var(--accent);
+  font-size: var(--text-md);
+  line-height: var(--line-md);
+  cursor: pointer;
+}
+.button:hover {
+  border-color: var(--accent);
+}
