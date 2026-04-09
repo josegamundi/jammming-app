@@ -1,4 +1,5 @@
-import styles from './App.module.css'
+import styles from './App.module.css';
+import SearchBar from './components/features/SearchBar/SearchBar';
 
 function App() {
   return (
@@ -10,10 +11,10 @@ function App() {
         </div>
       </header>
       <main>
-        <div className={styles.row}>
-          
+        <div className={`${styles.section01} ${styles.row}`}>
+          <SearchBar />
         </div>
-        <div className={styles.row}>
+        <div className={`${styles.section02} ${styles.row}`}>
 
         </div>
       </main>
