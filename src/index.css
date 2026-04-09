@@ -76,41 +76,8 @@
   padding: 0;
 }
 
-/* Typography settings */
-
-.title {
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: var(--text-2xl);
-  line-height: var(--line-2xl);
-}
-.subtitle {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: var(--text-xl);
-  line-height: var(--line-xl);
-}
-.highlight-text {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: var(--text-lg);
-  line-height: var(--line-lg);
-}
-.base-text {
-  font-family: var(--sans);
+p {
   font-weight: 400;
   font-size: var(--text-md);
   line-height: var(--line-md);
-}
-.secondary-text {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: var(--text-sm);
-  line-height: var(--line-sm);
-}
-.label {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: var(--text-xs);
-  line-height: var(--line-xs);
 }
