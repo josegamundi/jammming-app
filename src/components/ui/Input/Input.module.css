@@ -1,0 +1,21 @@
+.input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--input-bg);
+  font-size: var(--text-md);
+  line-height: var(--line-md);
+  color: var(--text);
+}
+
+.input:focus-visible {
+  outline: 1.5px solid var(--accent);
+}
+
+@media only screen and (max-width: 500px) {
+  .input {
+    padding: var(--space-3);
+  }
+}
