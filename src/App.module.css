@@ -1,0 +1,19 @@
+.row {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+}
+.headerContent {
+  padding: var(--space-6) var(--space-5);
+}
+.headerTitle {
+  margin-bottom: var(--space-2);
+  color: var(--text-h);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: var(--line-2xl);
+}
