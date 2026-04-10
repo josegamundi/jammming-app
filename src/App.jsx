@@ -1,5 +1,6 @@
 import styles from './App.module.css';
 import SearchBar from './components/features/SearchBar/SearchBar';
+import SearchResult from './components/features/SearchResult/SearchResult';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <SearchBar />
         </div>
         <div className={`${styles.section02} ${styles.row}`}>
-
+          <SearchResult />
         </div>
       </main>
     </>
