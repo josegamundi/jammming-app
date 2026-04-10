@@ -6,6 +6,9 @@
   border-radius: var(--space-2);
   padding-right: var(--space-3);
 }
+.track:last-child {
+  margin-bottom: 0;
+}
 .trackContent {
   flex-grow: 1;
   padding: var(--space-3) var(--space-4);
