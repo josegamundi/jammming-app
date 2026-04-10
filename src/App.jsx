@@ -1,6 +1,7 @@
-import styles from './App.module.css';
 import SearchBar from './components/features/SearchBar/SearchBar';
 import SearchResult from './components/features/SearchResult/SearchResult';
+import Playlist from './components/features/Playlist/Playlist';
+import styles from './App.module.css';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         </div>
         <div className={`${styles.section02} ${styles.row}`}>
           <SearchResult />
+          <Playlist />
         </div>
       </main>
     </>
