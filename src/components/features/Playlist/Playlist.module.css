@@ -1,19 +1,9 @@
 .playlist {
-  height: 80vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: relative;
   border: 1px solid var(--border);
   border-radius: var(--space-2);
 }
 .playlistHeader {
-  width: 100%;
-  display: inline-block;
-  position: sticky;
-  top: 0;
-  left: 0;
   padding: var(--space-4);
-  background-color: var(--bg);
 }
 .playlistTitle {
   margin-bottom: var(--space-4);
@@ -22,18 +12,12 @@
   line-height: var(--line-xl);
 }
 .playlistFooter {
-  width: 100%;
-  position: sticky;
-  left: 0;
-  bottom: 0;
   padding: var(--space-4);
-  background-color: var(--bg);
   text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
-  .playlist {
-    
+  .playlist { 
     border-radius: 0;
     border-left: 0;
     border-right: 0;
