@@ -1,3 +1,5 @@
+import { mockMusicLibrary } from './utils/mockData';
+
 import SearchBar from './components/features/SearchBar/SearchBar';
 import SearchResult from './components/features/SearchResult/SearchResult';
 import Playlist from './components/features/Playlist/Playlist';
@@ -17,7 +19,7 @@ function App() {
           <SearchBar />
         </div>
         <div className={`${styles.section02} ${styles.row}`}>
-          <SearchResult />
+          <SearchResult searchResults={mockMusicLibrary} />
           <Playlist />
         </div>
       </main>
