@@ -33,7 +33,7 @@ function App() {
           />
         </div>
         <div className={`${styles.section02} ${styles.row}`}>
-          <SearchResult searchResults={searchResults} />
+          <SearchResult result={searchResults} />
           <Playlist />
         </div>
       </main>
