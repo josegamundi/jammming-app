@@ -1,5 +1,4 @@
 import Input from '../../ui/Input/Input';
-import TrackList from '../../ui/TrackList/TrackList';
 import Track from '../../ui/Track/Track';
 import Button from '../../ui/Button/Button';
 import styles from './Playlist.module.css';
@@ -12,11 +11,11 @@ function Playlist(props) {
         <Input />
       </div>
       {props.collection.length === 0 ? (
-        <p className={styles.emptyMessage}>
-          Add songs to your playlist
+        <p>
+          Add songs to your playlist.
         </p>
       ) : (
-        <TrackList>
+        <ul>
           {
             props.collection.map((song) => {
               return (
@@ -34,7 +33,7 @@ function Playlist(props) {
               )
             })
           }
-        </TrackList>
+        </ul>
       )}
       <div className={styles.playlistFooter}>
         <Button

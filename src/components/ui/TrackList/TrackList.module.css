@@ -1,9 +1,0 @@
-.trackList {
-  padding: 0 var(--space-4);
-}
-
-@media only screen and (max-width: 500px) {
-  .trackList {
-    padding: 0 var(--space-3);
-  }
-}

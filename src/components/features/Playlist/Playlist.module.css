@@ -1,9 +1,10 @@
 .playlist {
   border: 1px solid var(--border);
   border-radius: var(--space-2);
+  padding: 0 var(--space-4);
 }
 .playlistHeader {
-  padding: var(--space-4);
+  padding: var(--space-4) 0;
 }
 .playlistTitle {
   margin-bottom: var(--space-4);
@@ -12,7 +13,7 @@
   line-height: var(--line-xl);
 }
 .playlistFooter {
-  padding: var(--space-4);
+  padding: var(--space-4) 0;
   text-align: center;
 }
 
@@ -21,10 +22,6 @@
     border-radius: 0;
     border-left: 0;
     border-right: 0;
-  }
-
-  .playlistHeader,
-  .playlistFooter {
-    padding: var(--space-4) var(--space-3);
+    padding: 0 var(--space-3);
   }
 }

@@ -1,4 +1,3 @@
-import TrackList from '../../ui/TrackList/TrackList';
 import Track from '../../ui/Track/Track';
 import Button from '../../ui/Button/Button';
 import styles from './SearchResult.module.css';
@@ -8,11 +7,11 @@ function SearchResult(props) {
     <div className={styles.searchResult}>
       <h2 className={styles.searchResultTitle}>Results</h2>
       {props.result.length === 0 ? (
-        <p className={styles.emptyMessage}>
+        <p>
           No songs found. Try a new search term.
         </p>
       ) : (
-        <TrackList>
+        <ul>
           {
             props.result.map((song) => {
               return (
@@ -30,7 +29,7 @@ function SearchResult(props) {
               )
             })
           }
-        </TrackList>
+        </ul>
       )}
     </div>
   )
