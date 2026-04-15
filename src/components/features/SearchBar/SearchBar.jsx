@@ -4,7 +4,7 @@ import styles from './SearchBar.module.css';
 
 function SearchBar(props) {
   return (
-    <form action="#" className={styles.searchBar}>
+    <div className={styles.searchBar}>
       <Input 
         placeholder={'Search for songs, artists, genres...'}
         value={props.query}
@@ -15,7 +15,7 @@ function SearchBar(props) {
         ariaLabel='Search for a song'
       >Search
       </Button>
-    </form>
+    </div>
   )
 }
 
