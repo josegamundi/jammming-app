@@ -1,11 +1,21 @@
-import { mockMusicLibrary } from './utils/mockData';
+import { useState, useEffect } from "react";
 
 import SearchBar from './components/features/SearchBar/SearchBar';
 import SearchResult from './components/features/SearchResult/SearchResult';
 import Playlist from './components/features/Playlist/Playlist';
 import styles from './App.module.css';
 
+import { searchSongs, mockMusicLibrary } from './utils/mockData';
+
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = () => {
+    const results = searchSongs(searchQuery);
+    setSearchResults(results);
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -16,10 +26,14 @@ function App() {
       </header>
       <main>
         <div className={`${styles.section01} ${styles.row}`}>
-          <SearchBar />
+          <SearchBar 
+            query={searchQuery}
+            setQuery={setSearchQuery}
+            performSearch={handleSearch}
+          />
         </div>
         <div className={`${styles.section02} ${styles.row}`}>
-          <SearchResult searchResults={mockMusicLibrary} />
+          <SearchResult searchResults={searchResults} />
           <Playlist />
         </div>
       </main>
