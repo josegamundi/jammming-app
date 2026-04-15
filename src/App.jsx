@@ -10,10 +10,25 @@ import { searchSongs, mockMusicLibrary } from './utils/mockData';
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [currentPlaylist, setCurrentPlaylist] = useState([]);
 
   const handleSearch = () => {
     const results = searchSongs(searchQuery);
     setSearchResults(results);
+  };
+
+  const handleAddToPlaylist = (song) => {
+    if (currentPlaylist.some((item) => item.id === song.id)) {
+      alert("Song already in playlist");
+      return;
+    }
+    setCurrentPlaylist((prev) => [song, ...prev]);
+    alert(`Added "${song.title}" to playlist`);
+  };
+
+  const handleRemoveFromPlaylist = (song) => {
+    setCurrentPlaylist(currentPlaylist.filter((item) => item.id !== song.id));
+    alert("Song removed from playlist");
   };
 
   return (
@@ -33,8 +48,14 @@ function App() {
           />
         </div>
         <div className={`${styles.section02} ${styles.row}`}>
-          <SearchResult result={searchResults} />
-          <Playlist />
+          <SearchResult 
+            result={searchResults}
+            addToPlaylist={handleAddToPlaylist}
+          />
+          <Playlist 
+            collection={currentPlaylist}
+            removeFromPlaylist={handleRemoveFromPlaylist}
+          />
         </div>
       </main>
     </>

@@ -11,6 +11,7 @@ function SearchBar(props) {
         onChange={props.setQuery}
       />
       <Button
+        text='Search'
         onClick={props.performSearch}
         ariaLabel='Search for a song'
       >Search

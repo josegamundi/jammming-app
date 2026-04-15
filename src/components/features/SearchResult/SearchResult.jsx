@@ -16,10 +16,11 @@ function SearchResult(props) {
             props.result.map((song) => {
               return (
                 <Track 
-                  key={song.id} 
-                  title={song.title}
-                  artist={song.artist}
-                  album={song.album}
+                  key={song.id}
+                  song={song}
+                  buttonText='Add'
+                  buttonAction={props.addToPlaylist}
+                  buttonAriaLabel='Add song to playlist'
                 />
               )
             })
