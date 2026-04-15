@@ -7,7 +7,7 @@ function Button(props) {
       className={styles.button}
       aria-label={props.ariaLabel}
     >
-      {props.text}
+      {props.children}
     </button>
   );
 }

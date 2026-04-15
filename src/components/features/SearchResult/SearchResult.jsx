@@ -1,5 +1,6 @@
 import TrackList from '../../ui/TrackList/TrackList';
 import Track from '../../ui/Track/Track';
+import Button from '../../ui/Button/Button';
 import styles from './SearchResult.module.css';
 
 function SearchResult(props) {
@@ -17,11 +18,15 @@ function SearchResult(props) {
               return (
                 <Track 
                   key={song.id}
-                  song={song}
-                  buttonText='Add'
-                  buttonAction={props.addToPlaylist}
-                  buttonAriaLabel='Add song to playlist'
-                />
+                  title={song.title}
+                  artist={song.artist}
+                  album={song.album}
+                >
+                  <Button 
+                    onClick={() => props.addToPlaylist(song)}
+                    ariaLabel='Add song to playlist'
+                  >Add</Button>
+                </Track>
               )
             })
           }
