@@ -1,14 +1,21 @@
+import { useState } from "react";
 import Input from '../../ui/Input/Input';
 import Track from '../../ui/Track/Track';
 import Button from '../../ui/Button/Button';
 import styles from './Playlist.module.css';
 
 function Playlist(props) {
+  const [playlistName, setPlaylistName] = useState("");
+
   return (
     <div className={styles.playlist}>
       <div className={styles.playlistHeader}>
         <h2 className={styles.playlistTitle}>Playlist</h2>
-        <Input />
+        <Input 
+          placeholder="Enter playlist name..."
+          value={playlistName}
+          onChange={setPlaylistName}
+        />
       </div>
       {props.collection.length === 0 ? (
         <p>
